@@ -1,2 +1,3 @@
-# AtOffer
-Coding practice at www.newcoder.com
+# Coding interview
+Coding practice at www.nowcoder.com
+The codes comes from the website
