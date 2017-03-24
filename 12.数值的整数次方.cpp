@@ -13,6 +13,23 @@
 
 //第一次知道了快速幂，又叫二分求幂的做法O(log₂N)
 
+/*
+链接：https://www.nowcoder.com/questionTerminal/1a834e5e3e1a4b7ba251417554e07c00
+来源：牛客网
+考虑到处理后结果的一致性，可以写得更加简洁
+class Solution {
+public:    
+        double Power(double base, int exponent) {
+            long long p = abs((long long)exponent);      
+            double r = 1.0;        
+            while(p){
+                if(p & 1) r *= base;           
+                base *= base;            
+                p >>= 1;        
+                }        
+        return exponent < 0 ? 1/ r : r;    }};
+*/
+
 class Solution {
 public:
     double Power(double base, int exponent) {
