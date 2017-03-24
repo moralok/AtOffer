@@ -15,6 +15,13 @@ sum=tempsum=a[0]开始
 自己写了一遍思路，清晰了很多但是毛线用都没有啊，动态规划是什么翔
 */
 
+/*
+算法时间复杂度O（n）用total记录累计值，maxSum记录和最大
+基于思想：对于一个数A，若是A的左边累计数非负，那么加上A能使得值不小于A，认为累计值对整体和是有贡献的。
+如果前几项累计值负数，则认为有害于总和，total记录当前值。此时 若和大于maxSum 则用maxSum记录下来
+看了下面没有冠名动态规划的解释好多啦，为什么有人自己不模拟一遍就说别人错了呢
+*/
+
 class Solution {
 public:
     int FindGreatestSumOfSubArray(vector<int> array) {
