@@ -18,19 +18,18 @@ class Solution {
 public:
     ListNode* deleteDuplication(ListNode* pHead)
     {
-        if(pHead==nullptr) return nullptr;
+        if(pHead==nullptr) return nullptr;			//递归的出口
         if(pHead && pHead->next==nullptr) return pHead;
-		    ListNode *p1=pHead;
-        if(pHead->val==pHead->next->val){
+		ListNode *p1=pHead;
+        if(pHead->val==pHead->next->val){			//开头相等不保留，两个指针还是有必要的
             p1=pHead->next->next;
             while(p1 && p1->val==pHead->val)
                 p1=p1->next;
             return deleteDuplication(p1);
-        }else{
+        }else{							//开头不等，须保留头结点
             p1=pHead->next;
             pHead->next=deleteDuplication(p1);
             return pHead;
         }
     }
 };
-
