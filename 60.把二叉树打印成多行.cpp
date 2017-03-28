@@ -14,7 +14,8 @@ struct TreeNode {
 };
 */
 
-//算法：与普通层序遍历类似，但在输出前，先获取队列长度用来控制每一次输出的次数
+//算法1:与普通层序遍历类似，但在输出前，先获取队列长度用来控制每一次输出的次数
+//算法2:通过在每一层读完加null作为标记
 class Solution {
 public:
         vector<vector<int> > Print(TreeNode* pRoot) {
